@@ -26,7 +26,7 @@ const Header: FC = () => {
 
   return (
     <Popover className="relative z-50">
-      <div className="flex items-center justify-between px-4 py-3 sm:px-6 md:space-x-6 space-x-2 bg-slate-800 border-b border-slate-700">
+      <div className="flex items-center justify-between px-4 py-3 sm:px-6 md:space-x-6 space-x-2 bg-gray-900 border-b border-gray-700">
         <div className="flex justify-start items-center space-x-8">
           <button
             className="text-lg  text-white no-underline text-left flex space-x-2 items-center focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none"
@@ -44,7 +44,7 @@ const Header: FC = () => {
               />
             </div> */}
             <p className="text-transparent bg-clip-text serum-gradient">
-              Openbook Explorer
+              Solape Explorer
             </p>
           </button>
           <div className="space-x-4 hidden md:flex items-center">
@@ -56,7 +56,7 @@ const Header: FC = () => {
               }}
             >
               <a className="focus-style px-1 rounded">
-                <p className="text-sm text-slate-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
+                <p className="text-sm text-gray-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
                   Decoder
                 </p>
               </a>
@@ -69,7 +69,7 @@ const Header: FC = () => {
               }}
             >
               <a className="focus-style px-1 rounded">
-                <p className="text-sm text-slate-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
+                <p className="text-sm text-gray-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
                   Create Market
                 </p>
               </a>
@@ -77,7 +77,7 @@ const Header: FC = () => {
           </div>
         </div>
         <div className="md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md p-1 md:p-2 text-slate-200 hover:bg-slate-800 hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md p-1 md:p-2 text-gray-200 hover:bg-gray-800 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500">
             <span className="sr-only">Open menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -91,7 +91,7 @@ const Header: FC = () => {
                     <p className="text-xs text-transparent bg-clip-text serum-gradient">
                       Program ID
                     </p>
-                    <p className="text-sm text-slate-200">
+                    <p className="text-sm text-gray-200">
                       {DEX_PROGRAMS[programID.toString()]
                         ? DEX_PROGRAMS[programID.toString()]
                         : `${prettifyPubkey(programID)}`}
@@ -100,17 +100,17 @@ const Header: FC = () => {
                   <Popover.Button
                     className={`
                 ${open ? "" : "text-opacity-90"}
-                group inline-flex items-center rounded-md bg-slate-700 hover:bg-slate-600 px-3 py-2 text-sm focus-style transition-colors`}
+                group inline-flex items-center rounded-md bg-gray-700 hover:bg-gray-600 px-3 py-2 text-sm focus-style transition-colors`}
                   >
                     {/* <span>Settings</span> */}
                     <Cog6ToothIcon
                       className={`${open ? "" : "text-opacity-70"}
-                  h-5 w-5 text-slate-200 group-hover:text-slate-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                  h-5 w-5 text-gray-200 group-hover:text-gray-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                       aria-hidden="true"
                     />
                   </Popover.Button>
                 </div>
-                <Popover.Panel className="bg-slate-800 rounded-md shadow-md border border-slate-700 p-3 absolute right-0 z-10 mt-2 w-96 transform ">
+                <Popover.Panel className="bg-gray-800 rounded-md shadow-md border border-gray-700 p-3 absolute right-0 z-10 mt-2 w-96 transform ">
                   {({ close }) => <SettingsPanel close={close} />}
                 </Popover.Panel>
               </>
@@ -133,7 +133,7 @@ const Header: FC = () => {
           className="absolute w-full top-full origin-top transform transition md:hidden mt-2"
         >
           {({ close }) => (
-            <div className="rounded-lg bg-slate-800 border border-slate-700 px-2 py-4 shadow-2xl mx-2">
+            <div className="rounded-lg bg-gray-800 border border-gray-700 px-2 py-4 shadow-2xl mx-2">
               <SettingsPanel close={close} />
             </div>
           )}
