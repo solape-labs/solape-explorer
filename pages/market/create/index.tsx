@@ -599,6 +599,47 @@ const CreateMarket = () => {
                 </div>
               </div>
             </div>
+            <div className="bg-neutral-900 border border-neutral-700 px-4 py-5 shadow rounded-lg sm:p-6">
+              <div className="md:grid md:grid-cols-3 md:gap-6">
+                <div className="md:col-span-1">
+                  <h3 className="text-lg font-medium leading-6 text-white">
+                    Advanced Options
+                  </h3>
+                  <p className="mt-1 text-sm text-white">
+                    Configure sizes for the different accounts used to create
+                    the market to adjust rent cost.
+                  </p>
+                  <div className="mt-6">
+                    <div className="mb-1 flex items-center space-x-1">
+                      <p className="text-xs text-white">
+                        Total Rent Estimate{" "}
+                      </p>
+                    </div>
+
+                    <p className="text-lg text-orange-400">
+                      {tokenAtomicsToPrettyDecimal(
+                        new BN(marketRent + vaultRent * 2 + mintRent * 2),
+                        9
+                      )}{" "}
+                      SOL{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-5 space-y-4 md:col-span-2 md:mt-0">
+                  <AdvancedOptionsForm
+                    useAdvancedOptions={useAdvancedOptions}
+                    register={register}
+                    setValue={setValue}
+                    formState={formState}
+                    totalMarketAccountSizes={{
+                      totalEventQueueSize,
+                      totalRequestQueueSize,
+                      totalOrderbookSize,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="flex justify-end w-full">
               <button className="w-full md:max-w-xs rounded-lg p-2 bg-orange-500 hover:bg-orange-400 transition-colors disabled:opacity-20">
                 Create

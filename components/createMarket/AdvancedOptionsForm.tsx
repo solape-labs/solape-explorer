@@ -29,7 +29,7 @@ export default function AdvancedOptionsForm({
             <Switch.Label as="span" className="input-label" passive>
               Use Advanced Options
             </Switch.Label>
-            <Switch.Description as="span" className="text-sm text-slate-500">
+            <Switch.Description as="span" className="text-sm text-white">
               Set custom sizes for market accounts.
             </Switch.Description>
           </span>
@@ -37,7 +37,7 @@ export default function AdvancedOptionsForm({
             checked={useAdvancedOptions}
             onChange={(value: boolean) => setValue("useAdvancedOptions", value)}
             className={classNames(
-              useAdvancedOptions ? "bg-orange-500" : "bg-orange-400",
+              useAdvancedOptions ? "bg-orange-500" : "bg-neutral-700",
               "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus-style"
             )}
           >
@@ -56,7 +56,7 @@ export default function AdvancedOptionsForm({
           !useAdvancedOptions ? "opacity-30" : "opacity-100"
         )}
       >
-        <label className="block text-xs text-slate-400">
+        <label className="block text-xs text-white">
           Event Queue Length
         </label>
         <div className="mt-1">
@@ -64,7 +64,7 @@ export default function AdvancedOptionsForm({
             <input
               type="number"
               disabled={!useAdvancedOptions}
-              className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+              className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
               {...register("eventQueueLength", {
                 min: {
                   value: 128,
@@ -74,7 +74,7 @@ export default function AdvancedOptionsForm({
                 required: true,
               })}
             />
-            <p className="absolute right-0 mr-2 text-sm text-slate-400">
+            <p className="absolute right-0 mr-2 text-sm text-white">
               {totalMarketAccountSizes.totalEventQueueSize} bytes
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function AdvancedOptionsForm({
           !useAdvancedOptions ? "opacity-30" : "opacity-100"
         )}
       >
-        <label className="block text-xs text-slate-400">
+        <label className="block text-xs text-white">
           Request Queue Length
         </label>
         <div className="mt-1">
@@ -98,14 +98,14 @@ export default function AdvancedOptionsForm({
             <input
               type="number"
               disabled={!useAdvancedOptions}
-              className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+              className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
               {...register("requestQueueLength", {
                 min: 1,
                 max: 100,
                 required: true,
               })}
             />
-            <p className="absolute right-0 mr-2 text-sm text-slate-400">
+            <p className="absolute right-0 mr-2 text-sm text-white">
               {totalMarketAccountSizes.totalRequestQueueSize} bytes
             </p>
           </div>
@@ -116,13 +116,13 @@ export default function AdvancedOptionsForm({
           !useAdvancedOptions ? "opacity-30" : "opacity-100"
         )}
       >
-        <label className="block text-xs text-slate-400">Orderbook Length</label>
+        <label className="block text-xs text-white">Orderbook Length</label>
         <div className="mt-1">
           <div className="relative flex items-center">
             <input
               type="number"
               disabled={!useAdvancedOptions}
-              className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+              className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
               {...register("orderbookLength", {
                 min: {
                   value: 201,
@@ -132,7 +132,7 @@ export default function AdvancedOptionsForm({
                 required: true,
               })}
             />
-            <p className="absolute right-0 mr-2 text-sm text-slate-400">
+            <p className="absolute right-0 mr-2 text-sm text-white">
               {totalMarketAccountSizes.totalOrderbookSize} bytes
             </p>
           </div>
