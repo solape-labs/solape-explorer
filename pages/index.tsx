@@ -23,7 +23,7 @@ const Home = () => {
     return !loading || network ? (
       <div
         className={classNames(
-          "bg-neutral-900 py-2 px-3 rounded-md space-y-1 border border-neutral-500"
+          "bg-neutral-900 py-2 px-3 rounded-md space-y-1 border border-neutral-600"
         )}
       >
         {children}
