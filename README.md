@@ -1,6 +1,6 @@
-# Serum Explorer 👀💧
+# Solape Openbook Explorer 🛠️🦍
 
-A explorer dashboard to search for various markets deployed on a [Serum Dex V3](https://github.com/project-serum/serum-dex) program.
+A explorer dashboard to search for various markets deployed on a [Openbook DEX](https://github.com/openbook-dex/program) program.
 
 ## Getting Started
 
