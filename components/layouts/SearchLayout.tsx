@@ -72,17 +72,17 @@ export const SearchLayout: FC<SearchLayoutProps> = ({
       <div>
         <Combobox value={selected} onChange={(value) => handleSelect(value)}>
           <div className="relative mt-1">
-            <div className="relative w-full cursor-default overflow-hidden rounded-md  bg-slate-800 text-left border border-slate-700 focus-visible:border-0 focus-visible:outline-none focus-visible:ring-0">
+            <div className="relative w-full cursor-default overflow-hidden rounded-md bg-neutral-900 text-left border border-neutral-700 focus-visible:border-0 focus-visible:outline-none focus-visible:ring-0">
               <Combobox.Button as="div">
                 <Combobox.Input
                   placeholder="Search markets"
-                  className="w-full border-none py-3 pl-3 pr-10 text-sm leading-5 text-slate-200 bg-slate-800 focus-visible:border-0 focus-visible:outline-none focus-visible:ring-0 placeholder:text-slate-400"
+                  className="w-full border-none py-3 pl-3 pr-10 text-sm leading-5 solapetext focus-visible:border-0 focus-visible:outline-none focus-visible:ring-0 placeholder:text-white"
                   onChange={debouncedChangeHandler}
                 />
               </Combobox.Button>
               <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <ChevronUpDownIcon
-                  className="h-5 w-5 text-cyan-400"
+                  className="h-5 w-5 text-orange-500"
                   aria-hidden="true"
                 />
               </Combobox.Button>
@@ -94,9 +94,9 @@ export const SearchLayout: FC<SearchLayoutProps> = ({
               leaveTo="opacity-0"
               afterLeave={() => setMarketQuery("")}
             >
-              <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-slate-800 shadow-2xl border border-slate-700 py-1 text-base shadow-lgsm:text-sm">
+              <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md solapenav shadow-2xl border border-neutral-700 py-1 text-base shadow-lg sm:text-sm">
                 {filteredMarkets.length === 0 && marketQuery !== "" ? (
-                  <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+                  <div className="relative cursor-default select-none py-2 px-4 text-neutral-700">
                     Nothing found.
                   </div>
                 ) : (
@@ -106,8 +106,8 @@ export const SearchLayout: FC<SearchLayoutProps> = ({
                       className={({ active }) =>
                         `relative cursor-pointer select-none py-2 px-4 flex items-center justify-between ${
                           active
-                            ? "serum-gradient text-slate-800 font-medium"
-                            : "text-slate-400"
+                            ? "solapetext font-medium"
+                            : "text-neutral-800"
                         }`
                       }
                       value={market}

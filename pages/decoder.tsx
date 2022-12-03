@@ -58,14 +58,14 @@ export default function Decoder() {
   return (
     <div className="space-y-4 mb-6">
       <div>
-        <h1 className="text-2xl text-slate-200">Instruction Data Decoder</h1>
+        <h1 className="text-2xl text-white">Instruction Data Decoder</h1>
       </div>
       <div>
         <form onSubmit={handleSubmit(handleDecode)} className="space-y-2">
           <label className="input-label">Hex Data</label>
           <textarea
             {...register("hex")}
-            className="w-full h-36 bg-slate-800 text-slate-200 rounded-md p-4 border border-slate-700 focus-style"
+            className="w-full h-36 bg-neutral-800 text-white rounded-md p-4 border border-neutral-700 focus-style"
           />
           <button type="submit" className="primary-btn focus-style">
             Decode
@@ -74,20 +74,20 @@ export default function Decoder() {
       </div>
       <div className="pt-4">
         <div>
-          <h3 className="text-lg text-slate-200">Result</h3>
+          <h3 className="text-lg text-white">Result</h3>
         </div>
-        <div className="rounded-md bg-slate-800 border border-slate-700 mt-2">
+        <div className="rounded-md bg-neutral-800 border border-neutral-700 mt-2">
           {!parsedData ? (
-            <div className="p-3 text-slate-500">
+            <div className="p-3 text-white">
               <p>null</p>
             </div>
           ) : (
-            <ul className="px-3 py-2 divide-y divide-slate-700">
+            <ul className="px-3 py-2 divide-y divide-neutral-700">
               <li className="w-full flex items-center justify-between py-2">
-                <p className="text-slate-400 text-sm md:text-base">
+                <p className="text-white text-sm md:text-base">
                   instruction
                 </p>
-                <p className="text-cyan-400 text-sm md:text-base">
+                <p className="text-orange-400 text-sm md:text-base">
                   {parsedData.instructionName}
                 </p>
               </li>
@@ -96,20 +96,20 @@ export default function Decoder() {
                   key={key}
                   className="w-full flex items-center justify-between py-2"
                 >
-                  <p className="text-slate-400 text-sm md:text-base">{key}</p>
+                  <p className="text-white text-sm md:text-base">{key}</p>
                   {value instanceof Array ? (
                     <div className="flex justify-end flex-col">
                       {value.map((v, i) => (
                         <p
                           key={`${i}-${JSON.stringify(v)}`}
-                          className="text-slate-200 text-sm md:text-base text-right"
+                          className="text-white text-sm md:text-base text-right"
                         >
                           {decodeValue(v)}
                         </p>
                       ))}
                     </div>
                   ) : (
-                    <p className="text-slate-200 text-sm md:text-base">
+                    <p className="text-white text-sm md:text-base">
                       {decodeValue(value)}
                     </p>
                   )}

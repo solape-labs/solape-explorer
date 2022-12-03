@@ -12,7 +12,7 @@ body {
 }
 
 .primary-btn {
-    @apply w-full p-2 bg-gray-100 hover:bg-gray-500 transition-all font-medium rounded-md flex items-center justify-center space-x-2 disabled:opacity-50 disabled:hover:bg-gray-600
+    @apply w-full p-2 bg-neutral-900 hover:bg-neutral-500 transition-all font-medium rounded-md flex items-center justify-center space-x-2 disabled:opacity-50 disabled:hover:bg-gray-600
 }
 
 .critical-btn {
@@ -24,17 +24,45 @@ body {
 }
 
 .focus-style {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none
 }
 
 .input {
-    @apply rounded-md p-2 bg-gray-300 focus-style sm:text-sm
+    @apply rounded-md p-2 bg-neutral-300 focus-style sm:text-sm
 }
 
 .input-2 {
-    @apply rounded-md p-2 bg-gray-300 focus-style sm:text-sm
+    @apply rounded-md p-2 bg-neutral-300 focus-style sm:text-sm
 }
 
 .input-label {
-    @apply text-xs text-gray-300
+    @apply text-xs text-white
 }
+.solapenav {
+    background: linear-gradient(100.61deg, #090b0b 0%, #1c2222 100%);
+  }
+  .solape__connect-btn {
+    background: transparent;
+    border: 2px solid #ff810a;
+    color: hsla(0, 0%, 100%, .85);
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  .solapetext:hover {
+    color: #ff810a;
+  }
+  
+  .solapetext span {
+    line-height: 23px;
+    font-weight: 300;
+  }
+  .solapetext {
+    background: transparent;
+    color: hsla(0, 0%, 100%, .85);
+    font-size: 16px;
+  }
+  .solapetext span {
+    line-height: 23px;
+    font-weight: 300;
+  }

@@ -9,6 +9,7 @@ import { useSerum } from "../../context";
 import { DEX_PROGRAMS } from "../../utils/constants";
 import { prettifyPubkey } from "../../utils/pubkey";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header: FC = () => {
   const router = useRouter();
@@ -26,41 +27,28 @@ const Header: FC = () => {
 
   return (
     <Popover className="relative z-50">
-      <div className="flex items-center justify-between px-4 py-3 sm:px-6 md:space-x-6 space-x-2 bg-gray-900 border-b border-gray-700">
+              <div className="h-16 w-16 absolute">
+              <Image
+                src="/logo.png"
+                width={1}
+                height={1}
+                layout="responsive"
+                alt="Solape Logo"
+              ></Image>
+            </div>
+      <div className="flex items-center justify-between px-4 py-3 sm:px-6 md:space-x-6 space-x-2 solapenav">
         <div className="flex justify-start items-center space-x-8">
           <button
-            className="text-lg  text-white no-underline text-left flex space-x-2 items-center focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none"
+            className="text-lg text-white no-underline text-left flex space-x-2 items-center ml-12 focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none"
             onClick={() =>
               router.push({ pathname: "/", query: sanitizeQuery(router.query) })
             }
           >
-            {/* <div className="h-16 w-16 absolute">
-              <Image
-                src="/OpenBook-Logomark.svg"
-                width={1}
-                height={1}
-                layout="responsive"
-                alt="Serum Explorer"
-              />
-            </div> */}
-            <p className="text-transparent bg-clip-text serum-gradient">
+            <p className="text-transparent bg-clip-text text-orange-200">
               Solape Explorer
             </p>
           </button>
           <div className="space-x-4 hidden md:flex items-center">
-            <Link
-              passHref
-              href={{
-                pathname: `/decoder`,
-                query: router.query,
-              }}
-            >
-              <a className="focus-style px-1 rounded">
-                <p className="text-sm text-gray-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
-                  Decoder
-                </p>
-              </a>
-            </Link>
             <Link
               passHref
               href={{
@@ -88,10 +76,10 @@ const Header: FC = () => {
               <>
                 <div className="flex items-center space-x-4">
                   <div className="flex flex-col items-end">
-                    <p className="text-xs text-transparent bg-clip-text serum-gradient">
+                    <p className="text-xs text-transparent bg-clip-text text-orange-200">
                       Program ID
                     </p>
-                    <p className="text-sm text-gray-200">
+                    <p className="text-sm text-white">
                       {DEX_PROGRAMS[programID.toString()]
                         ? DEX_PROGRAMS[programID.toString()]
                         : `${prettifyPubkey(programID)}`}
@@ -100,17 +88,17 @@ const Header: FC = () => {
                   <Popover.Button
                     className={`
                 ${open ? "" : "text-opacity-90"}
-                group inline-flex items-center rounded-md bg-gray-700 hover:bg-gray-600 px-3 py-2 text-sm focus-style transition-colors`}
+                group inline-flex items-center rounded-md solape__connect-btn hover:bg-neutral-700 px-3 py-2 text-sm focus-style transition-colors`}
                   >
                     {/* <span>Settings</span> */}
                     <Cog6ToothIcon
                       className={`${open ? "" : "text-opacity-70"}
-                  h-5 w-5 text-gray-200 group-hover:text-gray-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                  h-5 w-5 text-white group-hover:text-white transition duration-150 ease-in-out group-hover:text-opacity-80`}
                       aria-hidden="true"
                     />
                   </Popover.Button>
                 </div>
-                <Popover.Panel className="bg-gray-800 rounded-md shadow-md border border-gray-700 p-3 absolute right-0 z-10 mt-2 w-96 transform ">
+                <Popover.Panel className="solape__connect-btn rounded-md shadow-md border border-gray-700 p-3 absolute right-0 z-10 mt-2 w-96 transform ">
                   {({ close }) => <SettingsPanel close={close} />}
                 </Popover.Panel>
               </>

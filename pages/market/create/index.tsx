@@ -516,17 +516,17 @@ const CreateMarket = () => {
     <>
       <div className="space-y-4 mb-6">
         <div>
-          <h1 className="text-2xl text-slate-200">Create Market</h1>
+          <h1 className="text-2xl text-white">Create Market</h1>
         </div>
         <form onSubmit={handleSubmit(handleCreateMarket)}>
           <div className="space-y-4">
-            <div className="bg-slate-800 border border-slate-700 px-4 py-5 shadow rounded-lg sm:p-6">
+            <div className="bg-neutral-900 border border-neutral-700 px-4 py-5 shadow rounded-lg sm:p-6">
               <div className="md:grid md:grid-cols-3 md:gap-6">
                 <div className="md:col-span-1">
-                  <h3 className="text-lg font-medium leading-6 text-slate-200">
+                  <h3 className="text-lg font-medium leading-6 text-white">
                     Mints
                   </h3>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm text-white">
                     Configure the mints for the tokens you want to create a
                     market for.
                   </p>
@@ -549,7 +549,7 @@ const CreateMarket = () => {
                         >
                           {({ active, checked }) => (
                             <CreateMintOption active={active} checked={checked}>
-                              <p>New</p>
+                              <p>New Token</p>
                             </CreateMintOption>
                           )}
                         </RadioGroup.Option>
@@ -559,7 +559,7 @@ const CreateMarket = () => {
                         >
                           {({ active, checked }) => (
                             <CreateMintOption active={active} checked={checked}>
-                              <p>Existing</p>
+                              <p>Existing Token</p>
                             </CreateMintOption>
                           )}
                         </RadioGroup.Option>
@@ -583,13 +583,13 @@ const CreateMarket = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-slate-800 border border-slate-700 px-4 py-5 shadow rounded-lg sm:p-6">
+            <div className="bg-neutral-900 border border-neutral-700 px-4 py-5 shadow rounded-lg sm:p-6">
               <div className="md:grid md:grid-cols-3 md:gap-6">
                 <div className="md:col-span-1">
-                  <h3 className="text-lg font-medium leading-6 text-slate-200">
+                  <h3 className="text-lg font-medium leading-6 text-white">
                     Tickers
                   </h3>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm text-white">
                     Configure the tick sizes, or lowest representable quantities
                     of base and quote tokens.
                   </p>
@@ -599,49 +599,8 @@ const CreateMarket = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-slate-800 border border-slate-700 px-4 py-5 shadow rounded-lg sm:p-6">
-              <div className="md:grid md:grid-cols-3 md:gap-6">
-                <div className="md:col-span-1">
-                  <h3 className="text-lg font-medium leading-6 text-slate-200">
-                    Advanced Options
-                  </h3>
-                  <p className="mt-1 text-sm text-slate-400">
-                    Configure sizes for the different accounts used to create
-                    the market to adjust rent cost.
-                  </p>
-                  <div className="mt-6">
-                    <div className="mb-1 flex items-center space-x-1">
-                      <p className="text-xs text-slate-300">
-                        Total Rent Estimate{" "}
-                      </p>
-                    </div>
-
-                    <p className="text-lg text-cyan-400">
-                      {tokenAtomicsToPrettyDecimal(
-                        new BN(marketRent + vaultRent * 2 + mintRent * 2),
-                        9
-                      )}{" "}
-                      SOL{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-5 space-y-4 md:col-span-2 md:mt-0">
-                  <AdvancedOptionsForm
-                    useAdvancedOptions={useAdvancedOptions}
-                    register={register}
-                    setValue={setValue}
-                    formState={formState}
-                    totalMarketAccountSizes={{
-                      totalEventQueueSize,
-                      totalRequestQueueSize,
-                      totalOrderbookSize,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
             <div className="flex justify-end w-full">
-              <button className="w-full md:max-w-xs rounded-lg p-2 bg-cyan-500 hover:bg-cyan-600 transition-colors disabled:opacity-20">
+              <button className="w-full md:max-w-xs rounded-lg p-2 bg-orange-500 hover:bg-orange-400 transition-colors disabled:opacity-20">
                 Create
               </button>
             </div>

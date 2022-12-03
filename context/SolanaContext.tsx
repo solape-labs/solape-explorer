@@ -60,16 +60,16 @@ export const CLUSTERS: SolanaCluster[] = [
   //   network: "mainnet-beta",
   //   endpoint: "https://solana-api.projectserum.com",
   // },
-  {
-    label: "Testnet",
-    network: "testnet",
-    endpoint: clusterApiUrl("testnet"),
-  },
-  {
-    label: "Devnet",
-    network: "devnet",
-    endpoint: clusterApiUrl("devnet"),
-  },
+  //{
+  //  label: "Testnet",
+  //  network: "testnet",
+  //  endpoint: clusterApiUrl("testnet"),
+  //},
+  //{
+  //  label: "Devnet",
+  //  network: "devnet",
+  //  endpoint: clusterApiUrl("devnet"),
+  //},
   {
     label: "Custom RPC",
     network: "custom",

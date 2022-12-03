@@ -100,21 +100,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
 
   return (
     <div>
-      <div className="md:hidden border-b border-slate-700 pb-3 space-y-2 flex-col flex">
-        <button
-          onClick={() => {
-            router.push({
-              pathname: `/decoder`,
-              query: router.query,
-            });
-            close();
-          }}
-          className="w-fit focus-style px-1 py-0.5 rounded"
-        >
-          <p className="text-left text-slate-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
-            Decoder
-          </p>
-        </button>
+      <div className="md:hidden border-b border-neutral-700 pb-3 space-y-2 flex-col flex">
         <button
           onClick={() => {
             router.push({
@@ -125,37 +111,37 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
           }}
           className="w-fit focus-style px-1 py-0.5 rounded"
         >
-          <p className="text-left text-slate-200 hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none">
+          <p className="text-left solapetext text-white hover:underline focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none">
             Create Market
           </p>
         </button>
       </div>
       <div className="space-y-1 my-4 md:mt-2">
-        <h3 className="text-xs text-transparent bg-clip-text serum-gradient">
+        <h3 className="text-sm text-transparent bg-clip-text text-orange-200">
           Program ID
         </h3>
         {!isProgramChanging ? (
           <div className="w-full flex items-center space-x-2 ">
-            <p className="text-slate-200">
+            <p className="text-white">
               {DEX_PROGRAMS[programID.toString()]
                 ? DEX_PROGRAMS[programID.toString()]
                 : `${programID.toString().slice(0, 18)}...`}
             </p>
             <button
               onClick={() => handlePin(programID)}
-              className="focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none focus:outline-none"
+              className="focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none focus:outline-none"
             >
               {isPinned(programID.toString()) ? (
-                <BookmarkIconSolid className="text-slate-300 h-5 w-5 " />
+                <BookmarkIconSolid className="text-white h-5 w-5 " />
               ) : (
-                <BookmarkIcon className="text-slate-300 h-5 w-5 focus-visible:outline-none focus-visible:border-none" />
+                <BookmarkIcon className="text-white h-5 w-5 focus-visible:outline-none focus-visible:border-none" />
               )}
             </button>
             <button
               onClick={() => setIsProgramChanging(true)}
-              className="focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none"
+              className="focus-visible:outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none"
             >
-              <PencilIcon className="text-slate-200 h-5 w-5" />
+              <PencilIcon className="text-white h-5 w-5" />
             </button>
           </div>
         ) : (
@@ -171,7 +157,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
                 value={customProgramID}
                 onChange={(e) => setCustomProgramID(e.target.value)}
                 placeholder="Market Address"
-                className="flex-1 px-4 py-2 w-full border-cyan-600 border-b bg-transparent focus:outline-none"
+                className="flex-1 px-4 py-2 w-full border-orange-600 border-b bg-transparent focus:outline-none"
               />
               <button type="submit" className="hidden" />
             </form>
@@ -180,7 +166,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
               <button
                 type="submit"
                 key={programID}
-                className="w-full bg-slate-700 hover:bg-slate-600 transition-colors py-2 px-4 rounded flex items-center justify-between cursor-pointer"
+                className="w-full bg-neutral-900 hover:bg-neutral-600 transition-colors py-2 px-4 rounded flex items-center justify-between cursor-pointer"
                 onClick={() => {
                   setCustomProgramID(programID);
                   handleProgramChange(programID);
@@ -197,7 +183,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
                 {pinnedPrograms.map((programId) => (
                   <div
                     key={programId}
-                    className="w-full bg-slate-700 hover:bg-slate-600 transition-colors py-2 px-4 rounded flex items-center justify-between text-left cursor-pointer"
+                    className="w-full bg-neutral-900 hover:bg-neutral-600 transition-colors py-2 px-4 rounded flex items-center justify-between text-left cursor-pointer"
                   >
                     <button
                       className="flex-1 align-left"
@@ -211,7 +197,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
                       </p>
                     </button>
                     <div onClick={() => unpinProgram(programId)}>
-                      <TrashIcon className="h-5 w-5 text-slate-300 cursor-pointer hover:text-cyan-400 transition-all" />
+                      <TrashIcon className="h-5 w-5 text-white cursor-pointer hover:text-orange-400 transition-all" />
                     </div>
                   </div>
                 ))}
@@ -222,7 +208,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
       </div>
       <div className="mb-4">
         <div className="space-y-1.5">
-          <h3 className="text-transparent bg-clip-text serum-gradient text-xs">
+          <h3 className="text-transparent bg-clip-text serum-gradient text-orange-200 text-xs">
             Connection
           </h3>
           <ul className="space-y-1.5">
@@ -233,11 +219,11 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
                     key={cluster.endpoint}
                     onClick={() => setCluster(cluster)}
                     className={`${
-                      isActiveCluster(cluster) ? "bg-slate-600" : "bg-slate-700"
-                    } hover:bg-slate-600 p-2 cursor-pointer rounded-md `}
+                      isActiveCluster(cluster) ? "bg-orange-500" : "bg-orange-500"
+                    } hover:bg-orange-300 p-2 cursor-pointer rounded-md `}
                   >
                     <div>
-                      <h2 className="text-sm font-medium text-slate-200">
+                      <h2 className="text-sm font-medium text-white">
                         {cluster.label}
                       </h2>
                       {/* <p className="text-xs font-light text-slate-400">
@@ -250,13 +236,13 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
             <li
               className={`${
                 isActiveCluster(CUSTOM_RPC_CLUSTER)
-                  ? "bg-slate-600"
-                  : "bg-slate-700 py-2"
-              } hover:bg-slate-600 p-2 cursor-pointer rounded-md`}
+                  ? "bg-orange-500"
+                  : "bg-orange-500 py-2"
+              } hover:bg-orange-300 p-2 cursor-pointer rounded-md`}
               onClick={() => setCluster(CUSTOM_RPC_CLUSTER)}
             >
               <div>
-                <h2 className="font-medium text-sm text-slate-200">
+                <h2 className="font-medium text-sm text-white">
                   Custom RPC
                 </h2>
                 {cluster.label === "Custom RPC" && (
@@ -264,7 +250,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
                     type="text"
                     defaultValue={CUSTOM_RPC_CLUSTER.endpoint}
                     onChange={debouncedEndpointChangeHandler}
-                    className="border border-slate-500 p-2 text-slate-300 text-sm rounded mt-1 w-full bg-slate-700 focus:outline-none"
+                    className="border border-neutral-500 p-2 text-white text-sm rounded mt-1 w-full bg-neutral-700 focus:outline-none"
                   />
                 )}
               </div>
@@ -275,10 +261,10 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
       <div className="md:hidden">
         {wallet.connected ? (
           <div>
-            <p className="text-xs text-transparent bg-clip-text serum-gradient">
+            <p className="text-xs text-transparent bg-clip-text text-orange-200">
               Wallet address{" "}
             </p>
-            <p className="text-slate-200 mb-2 text-sm">
+            <p className="text-white mb-2 text-sm">
               {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
               {prettifyPubkey(wallet.publicKey!, 12)}
             </p>
@@ -288,7 +274,7 @@ const SettingsPanel = ({ close }: SettingPanelProps) => {
           onClick={() =>
             wallet.connected ? wallet.disconnect() : setVisible(true)
           }
-          className="bg-slate-700 hover:bg-slate-600 transition-colors text-slate-200 rounded-md w-full py-2 px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:border-none"
+          className="bg-orange-500 hover:bg-orange-300 transition-colors text-white rounded-md w-full py-2 px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:border-none"
         >
           {wallet.connected ? "Disconnect Wallet" : "Connect"}
         </button>

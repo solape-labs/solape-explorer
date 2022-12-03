@@ -18,14 +18,14 @@ export default function NewMintForm({
   const wallet = useWallet();
 
   return (
-    <div className="divide-y divide-slate-700">
+    <div className="divide-y divide-neutral-700">
       <div className="pb-4 space-y-2">
         <div>
-          <label className="block text-xs text-slate-400">Base Decimals</label>
+          <label className="block text-xs text-white">Base Decimals</label>
           <div className="mt-1">
             <input
               type="number"
-              className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+              className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
               {...register("newMints.baseDecimals", {
                 min: 0,
                 required: true,
@@ -34,12 +34,12 @@ export default function NewMintForm({
           </div>
         </div>
         <div>
-          <label className="block text-xs text-slate-400">Base Authority</label>
+          <label className="block text-xs text-white">Base Authority</label>
           <div className="mt-1">
             <div className="relative flex items-center">
               <input
                 type="text"
-                className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+                className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
                 {...register("newMints.baseAuthority", {
                   required: true,
                   validate: validatePubkey,
@@ -54,7 +54,7 @@ export default function NewMintForm({
                     wallet.publicKey!.toBase58()
                   )
                 }
-                className="absolute right-0 mr-1.5 py-1 px-2 rounded bg-slate-600 hover:bg-slate-500 text-xs transition-colors disabled:opacity-20 focus-style"
+                className="absolute right-0 mr-1.5 py-1 px-2 rounded bg-orange-500 hover:bg-orange-400 text-xs transition-colors disabled:opacity-20 focus-style"
               >
                 Wallet
               </button>
@@ -69,11 +69,11 @@ export default function NewMintForm({
       </div>
       <div className="pt-2 space-y-2">
         <div>
-          <label className="block text-xs text-slate-400">Quote Decimals</label>
+          <label className="block text-xs text-white">Quote Decimals</label>
           <div className="mt-1">
             <input
               type="number"
-              className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+              className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
               {...register("newMints.quoteDecimals", {
                 min: 0,
                 required: true,
@@ -82,14 +82,14 @@ export default function NewMintForm({
           </div>
         </div>
         <div>
-          <label className="block text-xs text-slate-400">
+          <label className="block text-xs text-white">
             Quote Authority
           </label>
           <div className="mt-1">
             <div className="relative flex items-center">
               <input
                 type="text"
-                className="block w-full rounded-md p-2 bg-slate-700 border-gray-300 focus-style sm:text-sm"
+                className="block w-full rounded-md p-2 bg-neutral-700 border-neutral-300 focus-style sm:text-sm"
                 {...register("newMints.quoteAuthority", {
                   required: true,
                   validate: validatePubkey,
@@ -107,7 +107,7 @@ export default function NewMintForm({
                     }
                   )
                 }
-                className="absolute right-0 mr-1.5 py-1 px-2 rounded bg-slate-600 hover:bg-slate-500 text-xs transition-colors disabled:opacity-20 focus-style"
+                className="absolute right-0 mr-1.5 py-1 px-2 rounded bg-orange-500 hover:bg-orange-400 text-xs transition-colors disabled:opacity-20 focus-style"
               >
                 Wallet
               </button>

@@ -137,17 +137,17 @@ const CreateMarketAdvanced = () => {
   return (
     <div className="space-y-4 mb-6">
       <div>
-        <h1 className="text-2xl text-slate-200">Advanced Create Market</h1>
+        <h1 className="text-2xl text-white">Advanced Create Market</h1>
       </div>
       <form onSubmit={handleSubmit(handleCreateAdvanced)}>
         <div className="space-y-4">
-          <div className="bg-slate-800 border border-slate-700 px-4 py-5 shadow rounded-lg sm:p-6">
+          <div className="bg-neutral-900 border border-neutral-700 px-4 py-5 shadow rounded-lg sm:p-6">
             <div className="md:grid md:grid-cols-3 md:gap-6">
               <div className="md:col-span-1">
-                <h3 className="text-lg font-medium leading-6 text-slate-200">
+                <h3 className="text-lg font-medium leading-6 text-white">
                   Mints and Vaults
                 </h3>
-                <p className="mt-1 text-sm text-slate-400">
+                <p className="mt-1 text-sm text-white">
                   Specify the mints and vaults for the tokens you want to create
                   a market for.
                 </p>
@@ -156,13 +156,13 @@ const CreateMarketAdvanced = () => {
                 <div>
                   <div className="space-y-2">
                     <div>
-                      <label className="block text-xs text-slate-400">
+                      <label className="block text-xs text-white">
                         Base Mint
                       </label>
                       <div className="mt-1">
                         <input
                           type="text"
-                          className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+                          className="block w-full rounded-md p-2 bg-neutral-900 focus-style sm:text-sm"
                           {...register("baseMint", {
                             required: true,
                             validate: validatePubkey,
@@ -176,13 +176,13 @@ const CreateMarketAdvanced = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs text-slate-400">
+                      <label className="block text-xs text-white">
                         Quote Mint
                       </label>
                       <div className="mt-1">
                         <input
                           type="text"
-                          className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+                          className="block w-full rounded-md p-2 bg-neutral-900 focus-style sm:text-sm"
                           {...register("quoteMint", {
                             required: true,
                             validate: validatePubkey,
@@ -197,13 +197,13 @@ const CreateMarketAdvanced = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs text-slate-400">
+                      <label className="block text-xs text-white">
                         Base Vault
                       </label>
                       <div className="mt-1">
                         <input
                           type="text"
-                          className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+                          className="block w-full rounded-md p-2 bg-neutral-900 focus-style sm:text-sm"
                           {...register("baseVault", {
                             required: true,
                             validate: validatePubkey,
@@ -217,13 +217,13 @@ const CreateMarketAdvanced = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs text-slate-400">
+                      <label className="block text-xs text-white">
                         Quote Vault
                       </label>
                       <div className="mt-1">
                         <input
                           type="text"
-                          className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+                          className="block w-full rounded-md p-2 bg-neutral-900 focus-style sm:text-sm"
                           {...register("quoteVault", {
                             required: true,
                             validate: validatePubkey,
@@ -241,7 +241,7 @@ const CreateMarketAdvanced = () => {
               </div>
             </div>
           </div>
-          <div className="bg-slate-800 border border-slate-700 px-4 py-5 shadow rounded-lg sm:p-6">
+          <div className="bg-neutral-900 border border-neutral-700 px-4 py-5 shadow rounded-lg sm:p-6">
             <div className="md:grid md:grid-cols-3 md:gap-6">
               <div className="md:col-span-1">
                 <h3 className="text-lg font-medium leading-6 text-slate-200">
@@ -426,7 +426,7 @@ const CreateMarketAdvanced = () => {
           <div className="flex justify-end w-full">
             <button
               type="submit"
-              className="w-full md:max-w-xs rounded-lg p-2 bg-cyan-500 hover:bg-cyan-600 transition-colors disabled:opacity-20"
+              className="w-full md:max-w-xs rounded-lg p-2 bg-orange-500 hover:bg-orange-600 transition-colors disabled:opacity-20"
             >
               Create
             </button>

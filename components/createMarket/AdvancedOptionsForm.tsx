@@ -37,7 +37,7 @@ export default function AdvancedOptionsForm({
             checked={useAdvancedOptions}
             onChange={(value: boolean) => setValue("useAdvancedOptions", value)}
             className={classNames(
-              useAdvancedOptions ? "bg-cyan-500" : "bg-slate-400",
+              useAdvancedOptions ? "bg-orange-500" : "bg-orange-400",
               "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus-style"
             )}
           >

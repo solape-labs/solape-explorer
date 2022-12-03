@@ -23,7 +23,7 @@ const Home = () => {
     return !loading || network ? (
       <div
         className={classNames(
-          "bg-gray-100 py-2 px-3 rounded-md space-y-1 border border-gray-700"
+          "bg-neutral-900 py-2 px-3 rounded-md space-y-1 border border-neutral-500"
         )}
       >
         {children}
@@ -31,7 +31,7 @@ const Home = () => {
     ) : (
       <div
         className={classNames(
-          "animate-pulse bg-slate-800 py-2 px-3 rounded-md space-y-1 border border-slate-700",
+          "animate-pulse bg-neutral-900 py-2 px-3 rounded-md space-y-1 border border-neutral-700",
           height ? `h-${height}` : "h-20"
         )}
       />
@@ -43,19 +43,19 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         <StatBlock loading={serumMarketsLoading}>
           <div>
-            <p className="text-transparent bg-clip-text serum-gradient text-sm">
+            <p className="text-transparent bg-clip-text solapetext text-sm">
               # of markets
             </p>
           </div>
           {serumMarkets ? (
             <div>
-              <p className="text-2xl font-medium text-slate-200">
+              <p className="text-2xl font-medium text-white">
                 {prettifyDecimal(serumMarkets!.length, 2)}
               </p>
             </div>
           ) : null}
           {serumMarketsLoading ? (
-            <div className="bg-slate-700 animate-pulse w-full h-8 rounded-lg" />
+            <div className="bg-neutral-900 animate-pulse w-full h-8 rounded-lg" />
           ) : null}
         </StatBlock>
         {/* <StatBlock loading={loading}>

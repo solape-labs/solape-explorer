@@ -124,7 +124,7 @@ export default function MintTokenModal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity" />
+          <div className="fixed inset-0 bg-neutral-900 bg-opacity-90 transition-opacity" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -138,18 +138,18 @@ export default function MintTokenModal({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="transform overflow-hidden rounded-lg bg-slate-800 border border-slate-700 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-sm sm:p-6">
+              <Dialog.Panel className="transform overflow-hidden rounded-lg bg-neutral-800 border border-neutral-700 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-sm sm:p-6">
                 <div className="w-full flex items-center justify-between">
-                  <h2 className="text-slate-300 font-medium">
+                  <h2 className="text-white font-medium">
                     Mint {prettifyPubkey(mint.address, 6)}
                   </h2>
                   <button onClick={onClose} className="focus-style rounded-md">
-                    <XMarkIcon className="h-5 w-5 text-cyan-400 focus-style" />
+                    <XMarkIcon className="h-5 w-5 text-orange-500 focus-style" />
                   </button>
                 </div>
                 <form onSubmit={handleSubmit(handleMint)}>
                   <div className="mt-3 space-y-1">
-                    <label className="block text-xs text-slate-400">
+                    <label className="block text-xs text-white">
                       Amount
                     </label>
                     <input
@@ -161,7 +161,7 @@ export default function MintTokenModal({
                   <div className="mt-5 sm:mt-5">
                     <button
                       type="submit"
-                      className="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-600 px-4 py-2 text-base font-medium text-slate-200 shadow-sm hover:bg-slate-500 focus-style sm:text-sm"
+                      className="inline-flex w-full justify-center rounded-md border border-transparent bg-neutral-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-neutral-500 focus-style sm:text-sm"
                     >
                       Mint
                     </button>

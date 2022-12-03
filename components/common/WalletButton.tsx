@@ -42,9 +42,9 @@ const WalletButton: FC = () => {
               }
             : () => setVisible(!visible)
         }
-        className="bg-slate-700 hover:bg-slate-600 rounded-md focus-style transition-colors"
+        className="solape__connect-btn"
       >
-        <div className="md:block hidden py-2 px-4 text-sm text-slate-200 group-hover:text-slate-300">
+        <div className="md:block hidden py-2 px-4 text-sm text-white group-hover:text-slate-300">
           {wallet.connected && wallet.publicKey
             ? `${wallet.publicKey.toString().slice(0, 6)}...`
             : "Connect"}
@@ -56,27 +56,27 @@ const WalletButton: FC = () => {
       <ul
         className={`${
           showDropdown ? "block" : "hidden"
-        } absolute top-full w-64 my-2  bg-slate-800 py-1 border border-slate-700 rounded flex flex-col space-y-1`}
+        } absolute top-full w-64 my-2 solape__connect-btn py-1 rounded flex flex-col space-y-1`}
       >
         <li
-          className="hover:bg-slate-700 p-2 cursor-pointer"
+          className="hover:bg-neutral-900 p-2 cursor-pointer"
           onClick={handleCopyClick}
         >
           <div>
-            <p className="text-sm text-slate-300">
+            <p className="text-sm text-white">
               {isCopied ? "Copied!" : "Copy Address"}
             </p>
           </div>
         </li>
         <li
-          className={`hover:bg-slate-700 p-2 cursor-pointer`}
+          className={`hover:bg-neutral-900 p-2 cursor-pointer`}
           onClick={() => {
             wallet.disconnect();
             setShowDropdown(false);
           }}
         >
           <div>
-            <h2 className="text-sm text-slate-300">Disconnect</h2>
+            <h2 className="text-sm text-white">Disconnect</h2>
           </div>
         </li>
       </ul>

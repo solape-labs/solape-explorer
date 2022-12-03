@@ -10,14 +10,14 @@ export const DataTableRow = ({
 }) => {
   return (
     <tr>
-      <td className="text-sm p-4 md:px-8 whitespace-nowrap text-slate-200">
+      <td className="text-sm p-4 md:px-8 whitespace-nowrap text-white">
         {label}
       </td>
-      <td className="text-sm font-light p-4 md:px-8 whitespace-nowrap flex justify-end items-center space-x-2 text-slate-300">
+      <td className="text-sm font-light p-4 md:px-8 whitespace-nowrap flex justify-end items-center space-x-2 text-neutral-800">
         <p>{value}</p>
         {link ? (
           <a href={link} target="_blank" rel="noopener noreferrer">
-            <ArrowTopRightOnSquareIcon className="h-4 w-4 cursor-pointer text-cyan-400" />
+            <ArrowTopRightOnSquareIcon className="h-4 w-4 cursor-pointer text-orange-400" />
           </a>
         ) : null}
       </td>

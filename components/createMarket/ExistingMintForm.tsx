@@ -13,11 +13,11 @@ export default function ExistingMintForm({
   return (
     <div className="space-y-2">
       <div>
-        <label className="block text-xs text-slate-400">Base Mint</label>
+        <label className="block text-xs text-white">Base Mint</label>
         <div className="mt-1">
           <input
             type="text"
-            className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+            className="block w-full rounded-md p-2 bg-neutral-700 focus-style sm:text-sm"
             {...register("existingMints.baseMint", {
               required: true,
               validate: validatePubkey,
@@ -31,11 +31,11 @@ export default function ExistingMintForm({
         </div>
       </div>
       <div>
-        <label className="block text-xs text-slate-400">Quote Mint</label>
+        <label className="block text-xs text-white">Quote Mint</label>
         <div className="mt-1">
           <input
             type="text"
-            className="block w-full rounded-md p-2 bg-slate-700 focus-style sm:text-sm"
+            className="block w-full rounded-md p-2 bg-neutral-700 focus-style sm:text-sm"
             {...register("existingMints.quoteMint", {
               required: true,
               validate: validatePubkey,
