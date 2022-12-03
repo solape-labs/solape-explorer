@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { getSearchLayout } from "../components/layouts/SearchLayout";
@@ -39,6 +40,14 @@ const Home = () => {
   };
 
   return (
+    <div className="flex flex-col">
+            <Image
+              src="/hometext.svg"
+              width={10}
+              height={400}
+              alt="Github"
+              className=""
+            />
     <div className="flex flex-col space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         <StatBlock loading={serumMarketsLoading}>
@@ -95,6 +104,7 @@ const Home = () => {
           )}
         </StatBlock> */}
       </div>
+    </div>
     </div>
   );
 };
