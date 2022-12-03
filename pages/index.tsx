@@ -45,7 +45,7 @@ const Home = () => {
               src="/hometext.svg"
               width={10}
               height={400}
-              alt="Github"
+              alt="Solape Text"
               className=""
             />
     <div className="flex flex-col space-y-4">
