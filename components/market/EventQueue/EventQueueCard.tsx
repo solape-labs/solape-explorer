@@ -6,7 +6,7 @@ import { EventData } from "./EventData";
 import { EventList } from "./EventList";
 import { classNames } from "../../../utils/general";
 import { Cranker } from "./Cranker";
-import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import ArrowPathIcon from "@heroicons/react/24/outline/ArrowPathIcon.js";
 
 export const EventQueueCard = () => {
   const { eventQueue } = useMarket();

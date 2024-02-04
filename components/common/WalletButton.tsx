@@ -1,4 +1,4 @@
-import { KeyIcon } from "@heroicons/react/24/outline";
+import KeyIcon from "@heroicons/react/24/outline/KeyIcon.js";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { FC, useRef, useState } from "react";

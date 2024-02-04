@@ -1,5 +1,5 @@
 import { Combobox, Transition } from "@headlessui/react";
-import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
+import ChevronUpDownIcon from "@heroicons/react/24/outline/ChevronUpDownIcon.js";
 import {
   ChangeEvent,
   FC,

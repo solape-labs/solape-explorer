@@ -15,7 +15,7 @@ import Loader from "../../common/Loader";
 import BN from "bn.js";
 import { Transaction } from "@solana/web3.js";
 import { MAX_U128 } from "../../../utils/constants";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon.js";
 
 type OpenOrderCardProps = {
   openOrder: OpenOrders;

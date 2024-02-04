@@ -5,7 +5,7 @@ import { useTokenBalance } from "../../../hooks";
 import { getExplorerAccountLink } from "../../../utils/general";
 import { tokenAtomicsToPrettyDecimal } from "../../../utils/numerical";
 import BN from "bn.js";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon.js";
 import { useMemo, useState } from "react";
 import { Mint } from "@solana/spl-token-2";
 import MintTokenModal from "../../common/Modals/MintTokenModal";

@@ -13,12 +13,10 @@ import {
   useSolana,
 } from "../../context";
 import { DEX_PROGRAMS } from "../../utils/constants";
-import { BookmarkIcon as BookmarkIconSolid } from "@heroicons/react/24/solid";
-import {
-  BookmarkIcon,
-  TrashIcon,
-  PencilIcon,
-} from "@heroicons/react/24/outline";
+import BookmarkIconSolid from "@heroicons/react/24/solid/BookmarkIcon.js";
+import BookmarkIcon from '@heroicons/react/24/outline/BookmarkIcon.js';
+import TrashIcon from '@heroicons/react/24/outline/TrashIcon.js';
+import PencilIcon from '@heroicons/react/24/outline/PencilIcon.js';
 import useProgramStore from "../../stores/programStore";
 import { toast } from "react-toastify";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";

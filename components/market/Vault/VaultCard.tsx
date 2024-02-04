@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon.js";
 import { programs } from "@metaplex/js";
 import { Mint } from "@solana/spl-token-2";
 import { PublicKey } from "@solana/web3.js";

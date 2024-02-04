@@ -10,7 +10,7 @@ import { useTokenBalance } from "../../../hooks";
 import { getAssociatedTokenAddress } from "@solana/spl-token-2";
 import { sendWalletTransaction } from "../../../utils/transaction";
 import Loader from "../../common/Loader";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import ChevronDownIcon from "@heroicons/react/24/outline/ChevronDownIcon.js";
 
 type LabelValue<T> = {
   label: string;

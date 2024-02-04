@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon.js";
 import { Order } from "@project-serum/serum/lib/market";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { MouseEventHandler, useState } from "react";
